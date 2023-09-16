@@ -1,0 +1,88 @@
+body {
+    font-size: 18px;
+    font-family: 'Oxygen', sans-serif;
+    color: black;
+    background-color: #E1E5EB;
+}
+
+#nav-header {
+    background-color: #8EC9BC;
+    height: 70px;
+    margin: 0;
+    border: 0;
+    border-radius: 0;
+    border-bottom: 1px solid black;
+}
+
+.navbar-brand {
+    margin-left: 25px;
+}
+
+.container {
+    padding: 0;
+}
+
+.navbar-header h1 {
+    margin-top: 0;
+    font-size: 1.7em;
+    font-weight: bold;
+    color: black;
+}
+
+.navbar-header button.navbar-toggle {
+    margin-top: 15px;
+    margin-right: 25px;
+    border: 1px solid #E59462;
+}
+
+.navbar-header .icon-bar {
+    border: 1px solid #E59462;
+}
+
+#collapsable-nav {
+    padding-top: 0;
+    border: 0;
+    margin: 0;
+}
+
+#nav-list {
+    margin-top: 0;
+}
+
+li {
+    margin: 0;
+    background-color: #E59462;
+}
+
+#nav-list a {
+    text-align: center;
+    color: black;
+}
+
+#chicken-li,
+#beef-li,
+#sushi-li {
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+#our-menu {
+    font-weight: bold;
+    font-size: 40px;
+}
+
+section {
+    height: auto;
+    margin: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 1px solid black;
+    background-color: #D3C5E5;
+}
+
+h3 {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+}

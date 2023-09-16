@@ -1,28 +1,140 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Bootstrap Starter Page</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/styles.css">
-  </head>
+  <title>Module 3 Coding Assignment</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
 <body>
 
-  <h1>Hello Coursera!</h1>
+  <header>
+
+    <nav id="nav-header" class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <div class="navbar-brand">
+            <h1>Food, LLC</h1>
+          </div>
+
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav"
+            aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+        </div><!-- .navbar-header -->
+      </div><!-- .container -->
+    </nav><!-- #nav-header -->
+
+    <div id="collapsable-nav" class="collapse navbar-collapse">
+      <ul id="nav-list" class="nav navbar-nav navbar-right hidden-lg hidden-md hidden-sm">
+        <li id="chicken-li">
+          <a href="#chicken-section">Chicken</a>
+        </li>
+        <li id="beef-li">
+          <a href="#beef-section">Beef</a>
+        </li>
+        <li id="sushi-li">
+          <a href="#sushi-section">Sushi</a>
+        </li>
+      </ul><!-- #nav-list -->
+    </div><!-- .collapse .navbar-collapse -->
+
+  </header>
+
+  <h2 id="our-menu" class="text-center">Our Menu</h2>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 col-sm-6 col-xs-12">
+        <section id="chicken-section">
+          <h3>Chicken</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+            et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
+            <br><br>
+            Integer dictum tincidunt pharetra. Suspendisse potenti. In pellentesque malesuada ex, sit amet
+            ornare eros scelerisque sit amet. Vivamus accumsan sem et lacinia efficitur. Suspendisse potenti.
+            Nulla lacinia sem sapien, quis volutpat eros efficitur in. Quisque semper nulla sed purus eleifend
+            fermentum. Fusce faucibus tortor vel nulla suscipit, eget tristique turpis egestas. Fusce iaculis,
+            quam a tincidunt iaculis, sem lacus volutpat mauris, accumsan sodales ligula mi eget justo.
+            <br><br>
+            Duis auctor ultrices laoreet. Mauris sollicitudin est at libero facilisis, in euismod diam bibendum. Quisque
+            dictum nisl non consequat bibendum. Maecenas nulla risus, convallis et turpis id, viverra faucibus neque.
+            Vestibulum dolor urna, ultricies in rhoncus sed, tincidunt id sem. Integer posuere aliquet dapibus. Vivamus
+            suscipit ligula quis nisi luctus auctor. Nunc condimentum ut dolor eget sollicitudin. Phasellus tempus, enim
+            eu molestie efficitur, ipsum orci auctor ipsum, at condimentum libero sem vitae quam.
+          </p>
+          <p>(End of Chicken Section)<a href="#navbar-header"> Back To Top</a></p>
+        </section>
+      </div>
+      <div class="col-md-4 col-sm-6 col-xs-12">
+        <section id="beef-section">
+          <h3>Beef</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+            et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
+            <br><br>
+            Integer dictum tincidunt pharetra. Suspendisse potenti. In pellentesque malesuada ex, sit amet
+            ornare eros scelerisque sit amet. Vivamus accumsan sem et lacinia efficitur. Suspendisse potenti.
+            Nulla lacinia sem sapien, quis volutpat eros efficitur in. Quisque semper nulla sed purus eleifend
+            fermentum. Fusce faucibus tortor vel nulla suscipit, eget tristique turpis egestas. Fusce iaculis,
+            quam a tincidunt iaculis, sem lacus volutpat mauris, accumsan sodales ligula mi eget justo.
+            <br><br>
+            Duis auctor ultrices laoreet. Mauris sollicitudin est at libero facilisis, in euismod diam bibendum. Quisque
+            dictum nisl non consequat bibendum. Maecenas nulla risus, convallis et turpis id, viverra faucibus neque.
+            Vestibulum dolor urna, ultricies in rhoncus sed, tincidunt id sem. Integer posuere aliquet dapibus. Vivamus
+            suscipit ligula quis nisi luctus auctor. Nunc condimentum ut dolor eget sollicitudin. Phasellus tempus, enim
+            eu molestie efficitur, ipsum orci auctor ipsum, at condimentum libero sem vitae quam.
+          </p>
+          <p>(End of Beef Section)<a href="#navbar-header"> Back To Top</a></p>
+        </section>
+      </div>
+      <div class="col-md-4 col-sm-6 col-xs-12">
+        <section id="sushi-section">
+          <h3>Sushi</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+            et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+            culpa qui officia deserunt mollit anim id est laborum.
+            <br><br>
+            Integer dictum tincidunt pharetra. Suspendisse potenti. In pellentesque malesuada ex, sit amet
+            ornare eros scelerisque sit amet. Vivamus accumsan sem et lacinia efficitur. Suspendisse potenti.
+            Nulla lacinia sem sapien, quis volutpat eros efficitur in. Quisque semper nulla sed purus eleifend
+            fermentum. Fusce faucibus tortor vel nulla suscipit, eget tristique turpis egestas. Fusce iaculis,
+            quam a tincidunt iaculis, sem lacus volutpat mauris, accumsan sodales ligula mi eget justo.
+            <br><br>
+            Duis auctor ultrices laoreet. Mauris sollicitudin est at libero facilisis, in euismod diam bibendum. Quisque
+            dictum nisl non consequat bibendum. Maecenas nulla risus, convallis et turpis id, viverra faucibus neque.
+            Vestibulum dolor urna, ultricies in rhoncus sed, tincidunt id sem. Integer posuere aliquet dapibus. Vivamus
+            suscipit ligula quis nisi luctus auctor. Nunc condimentum ut dolor eget sollicitudin. Phasellus tempus, enim
+            eu molestie efficitur, ipsum orci auctor ipsum, at condimentum libero sem vitae quam.
+          </p>
+          <p>(End of Sushi Section)<a href="#navbar-header"> Back To Top</a></p>
+        </section>
+      </div>
+    </div><!-- .row -->
+  </div><!-- .container -->
 
   <!-- jQuery (Bootstrap JS plugins depend on it) -->
   <script src="js/jquery-1.11.3.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/script.js"></script>
 </body>
+
 </html>
