@@ -16,6 +16,14 @@
     console.log(speakWord + " " + name);
   }
 
+  // Add another method called speakSimple into the SpeakGoodBye.js and 
+  // SpeakHello.js that is externally exposed just like the speak method is. 
+  // The speakSimple method should not use console.log, but instead should simply 
+  // return the greeting concatenated to the passed in name argument.
+  helloSpeaker.speakSimple = function (name) {
+    return speakWord + " " + name;
+  }
+
   // STEP 5: Expose the 'helloSpeaker' object to the global scope. Name it
   // 'helloSpeaker' on the global scope as well.
   // See Lecture 52, part 2
