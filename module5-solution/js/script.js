@@ -22,6 +22,7 @@ $(function () { // Same as document.addEventListener("DOMContentLoaded"...
     "https://coursera-jhu-default-rtdb.firebaseio.com/menu_items/";
   var menuItemsTitleHtml = "snippets/menu-items-title.html";
   var menuItemHtml = "snippets/menu-item.html";
+  var aboutHtml = "snippets/about.html";
 
   // Convenience function for inserting innerHTML for 'select'
   var insertHtml = function (selector, html) {
@@ -45,12 +46,17 @@ $(function () { // Same as document.addEventListener("DOMContentLoaded"...
     return string;
   };
 
-  // Remove the class 'active' from home and switch to Menu button
+  // Remove the class 'active' from home and about and switch to Menu button
   var switchMenuToActive = function () {
     // Remove 'active' from home button
     var classes = document.querySelector("#navHomeButton").className;
     classes = classes.replace(new RegExp("active", "g"), "");
     document.querySelector("#navHomeButton").className = classes;
+
+    // Remove 'active' from about button
+    var classes = document.querySelector("#navAboutButton").className;
+    classes = classes.replace(new RegExp("active", "g"), "");
+    document.querySelector("#navAboutButton").className = classes;
 
     // Add 'active' to menu button if not already there
     classes = document.querySelector("#navMenuButton").className;
@@ -59,6 +65,26 @@ $(function () { // Same as document.addEventListener("DOMContentLoaded"...
       document.querySelector("#navMenuButton").className = classes;
     }
   };
+
+  // Remove the class 'active' from home and menu and switch to About button
+  var switchAboutToActive = function () {
+    // Remove 'active' from home button
+    var classes = document.querySelector("#navHomeButton").className;
+    classes = classes.replace(new RegExp("active", "g"), "");
+    document.querySelector("#navHomeButton").className = classes;
+
+    // Remove 'active' from menu button
+    var classes = document.querySelector("#navMenuButton").className;
+    classes = classes.replace(new RegExp("active", "g"), "");
+    document.querySelector("#navMenuButton").className = classes;
+
+    // Add 'active' to about button if not already there
+    classes = document.querySelector("#navAboutButton").className;
+    if (classes.indexOf("active") === -1) {
+      classes += " active";
+      document.querySelector("#navAboutButton").className = classes;
+    }
+  }
 
   // On page load (before images or CSS)
   document.addEventListener("DOMContentLoaded", function (event) {
@@ -118,7 +144,7 @@ $(function () { // Same as document.addEventListener("DOMContentLoaded"...
         // var homeHtmlToInsertIntoMainPage = ....
         var homeHtmlToInsertIntoMainPage = insertProperty(homeHtml,
           "randomCategoryShortName",
-          "'" + chosenCategoryShortName + "'");
+          `'${chosenCategoryShortName}'`);
 
 
         // TODO: STEP 4: Insert the produced HTML in STEP 3 into the main page
@@ -159,6 +185,15 @@ $(function () { // Same as document.addEventListener("DOMContentLoaded"...
       menuItemsUrl + categoryShort + ".json",
       buildAndShowMenuItemsHTML);
   };
+
+  // Load the about view
+  dc.loadAbout = function () {
+    showLoading('#main-content');
+    $ajaxUtils.sendGetRequest(
+      aboutHtml,
+      buildAndShowAboutHTML,
+      false);
+  }
 
 
   // Builds HTML for the categories page based on the data
@@ -311,6 +346,25 @@ $(function () { // Same as document.addEventListener("DOMContentLoaded"...
     return finalHtml;
   }
 
+  // Builds data for the about page
+  function buildAndShowAboutHTML(aboutHtml) {
+    switchAboutToActive();
+    var randomNumber = generateRandomNumber();
+    for (let i = 1; i < 6; i++) {
+      var className = `class${i}`;
+      // An empty star should have its class value be class="fa fa-star-o". 
+      // A filled star should have its class value be class="fa fa-star"
+      var starIcon = i <= randomNumber ? "fa fa-star" : "fa fa-star-o";
+      aboutHtml = insertProperty(aboutHtml,
+        className,
+        starIcon);
+    }
+    // Display the numeric/textual number of stars right next to the star icons
+    aboutHtml = insertProperty(aboutHtml,
+      "starRating",
+      `${randomNumber}-star rating`);
+    insertHtml("#main-content", aboutHtml);
+  }
 
   // Appends price with '$' if price exists
   function insertItemPrice(html,
@@ -341,6 +395,10 @@ $(function () { // Same as document.addEventListener("DOMContentLoaded"...
     return html;
   }
 
+  // Produces a random number from 1 to 5
+  function generateRandomNumber() {
+    return Math.floor(Math.random() * 5) + 1;
+  }
 
   global.$dc = dc;
 
