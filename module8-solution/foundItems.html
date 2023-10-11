@@ -1,0 +1,17 @@
+<!-- display the found list of items -->
+<table class="table" ng-if="narrowItDown.items.length > 0">
+    <tr>
+        <th>Item Name</th>
+        <th>Item Short Name</th>
+        <th>Item Description</th>
+        <th>Remove Item</th>
+    </tr>
+    <tr ng-repeat="item in narrowItDown.items">
+        <td>{{ item.name }}</td>
+        <td>{{ item.short_name }}</td>
+        <td>{{ item.description }}</td>
+        <!-- give the user the ability to remove an item from the list -->
+        <td><button class="btn btn-secondary" ng-click="narrowItDown.removeItem({index: $index})">Don't want this
+                one!</button></td>
+    </tr>
+</table>
