@@ -72,7 +72,7 @@
             toBuyItems[itemIndex].quantity = itemQuantity;
             alreadyBoughtItems.push(toBuyItems[itemIndex]);
 
-            toBuyItems.splice(itemIndex, 1)
+            toBuyItems.splice(itemIndex, 1);
         }
     }
 
