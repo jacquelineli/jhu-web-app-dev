@@ -1,0 +1,43 @@
+<div class="container">
+    <h2>Sign up for the restaurant newsletter</h2>
+    <form name="signUpCtrl.form">
+        <div class="form-group">
+            <label for="firstName">First Name</label>
+            <input type="text" class="form-control" name="firstName" ng-model="signUpCtrl.firstName"
+                placeholder="Enter first name" required>
+            <div class="invalid-feedback" ng-if="signUpCtrl.form.firstName.$invalid">First name is a required field
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="lastName">Last Name</label>
+            <input type="text" class="form-control" name="lastName" ng-model="signUpCtrl.lastName"
+                placeholder="Enter last name" required>
+            <div class="invalid-feedback" ng-if="signUpCtrl.form.lastName.$invalid">Last name is a required field</div>
+        </div>
+        <div class="form-group">
+            <label for="email">Email address</label>
+            <input type="email" class="form-control" id="email" aria-describedby="emailHelp" ng-model="signUpCtrl.email"
+                placeholder="Enter email" required>
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            <div class="invalid-feedback" ng-if="signUpCtrl.form.email.$invalid">Email is a required field</div>
+        </div>
+        <div class="form-group">
+            <label for="phoneNumber">Phone Number</label>
+            <input type="tel" class="form-control" name="phoneNumber" ng-model="signUpCtrl.phoneNumber"
+                placeholder="Enter phone number" required>
+            <div class="invalid-feedback" ng-if="signUpCtrl.form.phoneNumber.$invalid">Phone number is a required field
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="menuNumber">Favorite Menu Number</label>
+            <input type="text" class="form-control" name="favoriteMenuNumber" ng-model="signUpCtrl.favoriteMenuNumber"
+                ng-change="signUpCtrl.validateFavoriteMenuNumber()" placeholder="Enter favorite menu number" required>
+            <div class="invalid-feedback" ng-if="signUpCtrl.form.favoriteMenuNumber.$invalid">Favorite menu number is a
+                required field</div>
+            <div class="invalid-feedback" ng-if="!signUpCtrl.validMenuItem">No such menu number exists</div>
+        </div>
+        <button type="submit" class="btn btn-primary" ng-click="signUpCtrl.submit()"
+            ng-disabled="!signUpCtrl.valid()">Submit</button>
+        <div ng-if="signUpCtrl.savedUser">Your information has been saved</div>
+    </form>
+</div>
