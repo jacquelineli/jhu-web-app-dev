@@ -14,6 +14,7 @@ describe('menuService', function () {
     });
   });
 
+  // Simple test which exercises the function that determines if the favorite item exists in the menu or doesn't exist
   it('should return menu item with short name L1', function () {
     $httpBackend.whenGET(ApiPath + '/menu_items/L/menu_items/0.json').respond(
       {
@@ -35,5 +36,5 @@ describe('menuService', function () {
     });
     $httpBackend.flush();
   });
-  
+
 });

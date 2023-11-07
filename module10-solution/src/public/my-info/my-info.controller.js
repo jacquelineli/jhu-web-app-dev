@@ -9,7 +9,8 @@
     var $ctrl = this;
 
     $ctrl.hasUser = UserService.hasUser();
-
+ 
+    // Fetch the user information
     if ($ctrl.hasUser) {
       $ctrl.user = UserService.getUser();
 

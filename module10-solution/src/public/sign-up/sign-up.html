@@ -34,10 +34,12 @@
                 ng-change="signUpCtrl.validateFavoriteMenuNumber()" placeholder="Enter favorite menu number" required>
             <div class="invalid-feedback" ng-if="signUpCtrl.form.favoriteMenuNumber.$invalid">Favorite menu number is a
                 required field</div>
+            <!-- The specified item name is not valid. -->
             <div class="invalid-feedback" ng-if="!signUpCtrl.validMenuItem">No such menu number exists</div>
         </div>
         <button type="submit" class="btn btn-primary" ng-click="signUpCtrl.submit()"
             ng-disabled="!signUpCtrl.valid()">Submit</button>
+        <!-- Once saved, display a message below the form saying the information has been saved. -->
         <div ng-if="signUpCtrl.savedUser">Your information has been saved</div>
     </form>
 </div>

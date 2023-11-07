@@ -3,7 +3,9 @@
         Not Signed Up Yet. <a ui-sref="public.signup">Sign up Now!</a></h2>
     </h2>
     <div ng-if="myInfoCtrl.hasUser">
-        <h3>My Info</h3>
+        <div class="row">
+            <h3>My Info</h3>
+        </div>
         <div class="row">
             <span>First Name:</span>
             <span>{{ myInfoCtrl.user.firstName }}</span>
