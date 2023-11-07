@@ -1,3 +1,4 @@
+<!-- Lists all available categories of items on the menu. Each listing is a link that takes the user to the /items view based off of which category is clicked. -->
 <ul class="list-group">
     <li class="list-group-item" ng-repeat="item in $ctrl.items" ui-sref="items({categoryShortName: item.short_name})">
         <h5> Name: {{ item.name }}</h5>
