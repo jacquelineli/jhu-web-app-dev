@@ -16,7 +16,7 @@
             // Home page
             .state('home', {
                 url: '/',
-                templateUrl: 'src/menuApp/templates/home.template.html'
+                templateUrl: 'src/menuapp/templates/home.template.html'
             })
 
             // Categories page
